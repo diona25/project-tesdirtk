@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tsdirtk Admin Dashboard</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../Css/admin.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="col-md-3 col-lg-2 sidebar p-3">
+        <div class="text-center mb-5">
+            <h3 class="logo">Tsdirtk</h3>
+
+        </div>
+        
+        <nav class="nav flex-column">
+            <a class="nav-link active" href="#dashboard">
+                <i class="fas fa-home me-2"></i> Dashboard
+            </a>
+            <a class="nav-link" href="#collections">
+                <i class="fas fa-tshirt me-2"></i> Collections
+            </a>
+            <a class="nav-link" href="#orders">
+                <i class="fas fa-shopping-cart me-2"></i> Orders
+            </a>
+            <a class="nav-link" href="#clients">
+                <i class="fas fa-users me-2"></i> Clients
+            </a>
+            <a class="nav-link" href="#messages">
+                <i class="fas fa-envelope me-2"></i> Messages
+            </a>
+            <a class="nav-link" href="#settings">
+                <i class="fas fa-cog me-2"></i> Settings
+            </a>
+        </nav>
+    </div>
+     <!-- Mobile Toggle Button -->
+     <button class="navbar-toggler d-md-none btn">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Overlay for Mobile -->
+    <div class="overlay"></div>
+
+    <div class="container-fluid">
+ <section  id="dashboard" class="class-active">
+   
+        <div class="row">
+            
+
+            <!-- Main Content -->
+            <div class="col-md-9 col-lg-10 p-4">
+                <!-- Header -->
+                <div class="mb-4">
+                    <h2 class="text-center">Admin Panel</h2>
+                    <p class=" text-center lead">Welcome Admin!</p>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="row g-4 mb-4">
+                    <div class="col-6 col-lg-3">
+                        <div class="dashboard-card p-3 text-white bg-primary">
+                            <h5>Total Orders</h5>
+                            <h2>89</h2>
+                            <small>+12% from last month</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="dashboard-card p-3 text-white bg-success">
+                            <h5>Completed</h5>
+                            <h2>65</h2>
+                            <small>5 today</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="dashboard-card p-3 text-white bg-warning">
+                            <h5>Pending</h5>
+                            <h2>18</h2>
+                            <small>3 urgent</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="dashboard-card p-3 text-white bg-danger">
+                            <h5>Canceled</h5>
+                            <h2>6</h2>
+                            <small>2 this week</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts -->
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="dashboard-card p-3">
+                            <h5 class="mb-3">Order Distribution</h5>
+                            <canvas id="orderPieChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="dashboard-card p-3">
+                            <h5 class="mb-3">Revenue Overview</h5>
+                            <canvas id="revenueChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+<!-- Sales Chart -->
+          <div class="row mb-4">
+            <div class="col-12">
+              <div class="dashboard-card p-3">
+                <h5 class="mb-3">Order Trends</h5>
+                <canvas id="salesChart" height="100"></canvas>
+              </div>
+            </div>
+          </div>
+
+                <!-- Recent Orders -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="dashboard-card p-3">
+                            <h5 class="mb-3">Recent Orders</h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Order ID</th>
+                                            <th>Customer</th>
+                                            <th>Amount</th>
+                                            <th>Date</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                     <tr>
+                        <td>#1234</td>
+                        <td>Aisha Khan</td>
+                        <td>$899.99</td>
+                        <td>2023-08-15</td>
+                        <td>
+                          <span class="order-status bg-success">Completed</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#1235</td>
+                        <td>Fatima Ahmed</td>
+                        <td>$1,299.99</td>
+                        <td>2023-08-14</td>
+                        <td>
+                          <span class="order-status bg-warning">Pending</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#1236</td>
+                        <td>Zainab Ali</td>
+                        <td>$599.99</td>
+                        <td>2023-08-13</td>
+                        <td>
+                          <span class="order-status bg-primary"
+                            >Processing</span
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#1237</td>
+                        <td>Mariam Hassan</td>
+                        <td>$1,599.99</td>
+                        <td>2023-08-12</td>
+                        <td>
+                          <span class="order-status bg-danger">Canceled</span>
+                        </td>
+                      </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+   
+
+
+
+<!-- Clients Section -->
+<section id="clients" class="d-none p-3">
+    <div class="container-fluid">
+        <div class="dashboard-card p-4 mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3 class="mb-0">Client Management</h3>
+                <button class="btn btn-primary" id="addClientBtn">
+                    <i class="fas fa-plus me-2"></i>Add New Client
+                </button>
+            </div>
+
+            <!-- Client Table -->
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Profile</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="clientList">
+                        <!-- Client rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Client Modal -->
+<div class="modal fade" id="clientModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Client Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="clientForm">
+                    <div class="mb-3">
+                        <label class="form-label">Profile Picture</label>
+                        <input type="file" class="form-control" name="profilePicture" accept="image/*">
+                        <div class="preview-container mt-2" style="display: none;">
+                            <img id="profilePreview" class="img-thumbnail" style="max-width: 150px;">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Phone</label>
+                        <input type="tel" class="form-control" name="phone">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Status</label>
+                        <select class="form-select" name="status">
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                            <option value="pending">Pending</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="submit" form="clientForm" class="btn btn-primary">Save Client</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+  
+
+<!-- Collections Section -->
+<section id="collections" class="d-none p-3">
+    <div class="container-fluid">
+        <div class="dashboard-card p-4 mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3 class="mb-0">Collections Management</h3>
+                <button class="btn btn-primary" id="addCollectionBtn">
+                    <i class="fas fa-plus me-2"></i>Add New Collection
+                </button>
+            </div>
+
+            <!-- Collections Table -->
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="collectionList">
+                        <!-- Collection rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Collection Modal -->
+<div class="modal fade" id="collectionModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Collection Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="collectionForm">
+                    <div class="mb-3">
+                        <label class="form-label">Collection Image</label>
+                        <input type="file" class="form-control" name="collectionImage" accept="image/*">
+                        <div class="preview-container mt-2" style="display: none;">
+                            <img id="collectionPreview" class="img-thumbnail" style="max-width: 150px;">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Collection Name</label>
+                        <input type="text" class="form-control" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Category</label>
+                        <select class="form-select" name="category" required>
+                            <option value="men">chawi</option>
+                            <option value="women">constantinois</option>
+                            <option value="kids">assimi</option>
+                            <option value="melhfa">melhfa</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Price</label>
+                        <input type="number" class="form-control" name="price" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Stock</label>
+                        <input type="number" class="form-control" name="stock" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Status</label>
+                        <select class="form-select" name="status">
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="submit" form="collectionForm" class="btn btn-primary">Save Collection</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Orders Section -->
+<section id="orders" class="d-none p-3">
+    <div class="container-fluid">
+        <div class="dashboard-card p-4 mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3 class="mb-0">Orders Management</h3>
+                <div class="btn-group">
+                    <button class="btn btn-outline-primary" id="filterAll">All</button>
+                    <button class="btn btn-outline-success" id="filterCompleted">Completed</button>
+                    <button class="btn btn-outline-warning" id="filterPending">Pending</button>
+                    <button class="btn btn-outline-danger" id="filterCanceled">Canceled</button>
+                </div>
+            </div>
+
+            <!-- Orders Table -->
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Items</th>
+                            <th>Total</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orderList">
+                        <!-- Order rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Order Modal -->
+<div class="modal fade" id="orderModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Order Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Customer Information</h6>
+                        <p id="customerInfo"></p>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Order Status</h6>
+                        <select class="form-select" id="orderStatus">
+                            <option value="pending">Pending</option>
+                            <option value="processing">Processing</option>
+                            <option value="completed">Completed</option>
+                            <option value="canceled">Canceled</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <h6>Order Items</h6>
+                    <div id="orderItems"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="updateOrderStatus">Update Status</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Messages Section -->
+<section id="messages" class="d-none p-3">
+    <div class="container-fluid">
+        <div class="dashboard-card p-4 mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3 class="mb-0">Customer Messages</h3>
+                <div class="btn-group">
+                    <button class="btn btn-outline-primary active" id="filterAllMessages">All</button>
+                    <button class="btn btn-outline-primary" id="filterUnreadMessages">Unread</button>
+                    <button class="btn btn-outline-primary" id="filterReadMessages">Read</button>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Subject</th>
+                            <th>Message</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th class="actions">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="messageList">
+                        <!-- Messages will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Settings Section -->
+<section id="settings" class="d-none p-3">
+    <div class="container-fluid">
+        <div class="dashboard-card p-4 mb-4">
+            <h3 class="mb-4">Store Settings</h3>
+            <form id="settingsForm" class="settings-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Store Name</label>
+                            <input type="text" class="form-control" name="storeName" value="Tsdirtk">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Store Description</label>
+                            <textarea class="form-control" name="storeDescription" rows="3">Traditional Algerian Fashion Store</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Contact Email</label>
+                            <input type="email" class="form-control" name="contactEmail" value="contact@tsdirtk.com">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" name="phoneNumber" value="+213 123 456 789">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Store Address</label>
+                            <textarea class="form-control" name="address" rows="3">123 Fashion Street, Algiers, Algeria</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Business Hours</label>
+                            <div class="input-group mb-2">
+                                <span class="input-group-text"><i class="fas fa-clock"></i></span>
+                                <input type="text" class="form-control" name="businessHours" value="9:00 AM - 6:00 PM">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Social Media Links</label>
+                            <div class="input-group mb-2">
+                                <span class="input-group-text"><i class="fab fa-facebook"></i></span>
+                                <input type="url" class="form-control" name="facebook" placeholder="Facebook URL" value="https://facebook.com/tsdirtk">
+                            </div>
+                            <div class="input-group mb-2">
+                                <span class="input-group-text"><i class="fab fa-instagram"></i></span>
+                                <input type="url" class="form-control" name="instagram" placeholder="Instagram URL" value="https://instagram.com/tsdirtk">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fab fa-tiktok"></i></span>
+                                <input type="url" class="form-control" name="tiktok" placeholder="TikTok URL" value="https://tiktok.com/@tsdirtk">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-primary">Save Settings</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Message Modal -->
+<div class="modal fade" id="messageModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Message Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div id="messageDetails"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="replyMessage">Reply</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="../js/admin.js"></script>
+</body>
+</html>

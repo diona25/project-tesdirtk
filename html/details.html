@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script defer src="../js/cart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="../Css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../Css/details.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md sticky-top bg-light shadow-sm">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown d-none d-md-inline-block">
+            <a class="nav-link" id="cart-icon" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
+                <path
+                  d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+              </svg>
+            </a>
+          </li>
+          <li class="nav-item dropdown d-none d-md-inline-block">
+            <a class="nav-link" href="login.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                <path
+                  d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <!-- Logo -->
+
+        <a class="navbar-brand d-flex align-items-center" href="home.html">
+          <img src="../Images/logo.png" alt="logo" width="40px" height="50px" />
+          <h1 class="logo ms-2">tesdirtek</h1>
+        </a>
+
+        <!-- Icons and Toggle Button -->
+        <div class="d-flex align-items-center">
+          <div class="nav-icons">
+            <a href="#" class="me-1 text-white d-inline-block d-md-none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
+                <path
+                  d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+              </svg>
+            </a>
+            <a href="login.html" class="me-1 text-dark d-inline-block d-md-none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                <path
+                  d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+              </svg>
+            </a>
+          </div>
+          <button class="navbar-toggler" type="button w-25 h-25" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown ms-auto">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">اللغة</a>
+              <ul class="dropdown-menu">
+                <!-- <li><a class="dropdown-item" onclick="switchToEnglish()" href="#">عربية</a></li> -->
+                <li><a class="dropdown-item" href="#">عربية</a></li>
+                <li><a class="dropdown-item" href="#" onclick="switchToEnglish()">English</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item ms-auto"><a class="nav-link" href="about.html">من نحن؟</a></li>
+            <li class="nav-item ms-auto"><a class="nav-link" href="home.html">الرئيسية</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <div class="container py-5">
+        <div class="row">
+          <!-- Product Image -->
+          <div class="col-md-6 justify-content-center align-items-center d-flex image-container">
+            <img src="../Images/chawi1.jpg" class="img-fluid active" id="product-image" alt="Silk Maxi Dress" />
+          </div>
+
+          <!-- Product Details -->
+          <div class="col-md-6 text-center">
+            <h1 class="mb-3 me-auto" style="color: #f8f9fa">الملحفة الشاوية</h1>
+            <div class="product-price mb-4">100$</div>
+
+            <div class="mb-4">
+              <h5>الالوان المتوفرة</h5>
+              <div class="d-flex align-items-center justify-content-center">
+                <div class="color-option active">
+                  <button class="color-btn" data-color="black" data-image="../Images/chawi-black.jpg" style="background-color: #000000"></button>
+                </div>
+                <div class="color-option">
+                  <button class="color-btn" data-color="light-blue" data-image="../Images/chawi-midnight.jpg" style="background-color: #4169e1"></button>
+                </div>
+                <div class="color-option active">
+                  <button class="color-btn" data-color="violet" data-image="../Images/chawi-violet.jpg" style="background-color: #d7bde2"></button>
+                </div>
+                <div class="color-option">
+                  <button class="color-btn" data-color="chawi1" data-image="../Images/chawi1.jpg" style="background-color: #ff0000"></button>
+                </div>
+                <div class="color-option">
+                  <button class="color-btn" data-color="Emerald Green" data-image="../Images/chawi-vert.jpg" style="background-color: #98fb98"></button>
+                </div>
+                <div class="color-option">
+                  <button class="color-btn" data-color="Royal Purple" data-image="../Images/chawi-ciel.jpg" style="background-color: #add8e6"></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <h5>الوصف</h5>
+              <p class="text-muted">
+                الملحفة الشاوية المعروضة في الصورة هي قطعة تقليدية أنيقة تعكس الجمال والتراث الجزائري. تتميز بلونها الأحمر الداكن مع تطريزات ذهبية فاخرة تضيف لمسة راقية وفخمة. التصميم الفضفاض يمنح
+                راحة وأناقة، بينما تضيف الإكسسوارات مثل التاج لمسة من الفخامة التقليدية.
+              </p>
+            </div>
+
+            <div class="mb-4">
+              <h5>اختاري</h5>
+              <div class="d-flex align-items-center justify-content-center">
+                <div class="size-option me-2 mb-2">XS</div>
+                <div class="size-option me-2 mb-2">S</div>
+                <div class="size-option me-2 mb-2">M</div>
+                <div class="size-option me-2 mb-2">L</div>
+                <div class="size-option mb-2">XL</div>
+              </div>
+            </div>
+
+            <div class="d-grid gap-2">
+              <button class="btn add-to-cart-btn" id="addToCartBtn"><i class="fas fa-shopping-bag me-2"></i>اضف الى السلة</button>
+            </div>
+
+            <div class="mt-4">
+              <h5 class="mb-3">تفاصيل</h5>
+              <ul class="product-details-list list-unstyled">
+                <li><strong>المادة:</strong> قماش خفيف ومريح</li>
+                <li><strong>العناية:</strong> غسيل يدوي أو آلي بدرجة حرارة منخفضة</li>
+                <li><strong>الطول:</strong> طويل يغطي الجسم بالكامل</li>
+                <li><strong>الإغلاق:</strong> يلف حول الجسم بدون سحّاب</li>
+                <li><strong>اللون الحالي:</strong> <span id="selected-color">متعدد الألوان بنقوش تقليدية</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function switchToEnglish() {
+        // Redirect to home page (index.html)
+        window.location.href = "detailsE.html";
+      }
+
+      document.querySelectorAll(".color-btn").forEach((button) => {
+        button.addEventListener("click", function () {
+          // احصل على رابط الصورة من السمة data-image
+          const newImage = this.dataset.image;
+
+          // غيّر مصدر الصورة الرئيسية
+          document.getElementById("product-image").src = newImage;
+
+          // (اختياري) إضافة تأثير تغيير سلس
+          document.getElementById("product-image").style.opacity = "0";
+          setTimeout(() => {
+            document.getElementById("product-image").style.opacity = "1";
+          }, 300);
+        });
+      });
+    </script>
+    <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- Cart Overlay -->
+    <div class="cart-overlay"></div>
+    <div class="cart-sidebar">
+      <div class="cart-header">
+        <h3>سلة التسوق</h3>
+        <button class="close-cart">&times;</button>
+      </div>
+      <div class="cart-body">
+        <div class="cart-items-container"></div>
+      </div>
+      <div class="cart-total">الإجمالي: $<span id="total-price">0.00</span></div>
+      <button class="btn btn-success w-100 py-2 checkout-btn"><i class="fas fa-shopping-cart me-2"></i> إتمام الشراء</button>
+    </div>
+
+    <footer class="footer">
+      <!-- القسم العلوي -->
+      <div class="footer-top">
+        <h2>تواصلوا معنا ...</h2>
+        <div class="contact-button">
+          <a href="contact E.html"><i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- القسم السفلي -->
+      <div class="footer-bottom">
+        <div class="footer-column">
+          <h3>بيانات التواصل</h3>
+          <p><i class="fas fa-envelope"></i> info@tsdirtk.com</p>
+          <p><i class="fas fa-phone"></i> +213 123 456 789</p>
+          <p><i class="fas fa-map-marker-alt"></i> قسنطينة,الجزائر</p>
+        </div>
+
+        <div class="footer-column">
+          <h3>طرق الدفع</h3>
+          <div class="payment-icons">
+            <i class="fas fa-credit-card"></i> البطاقة الذهبية
+            <br />
+            <i class="fas fa-hand-holding-usd"></i> الدفع عند الاستلام
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>مواقيت العمل</h3>
+          <p><i class="fas fa-clock"></i> الأحد - الخميس: 9:00 - 18:00</p>
+          <p><i class="fas fa-clock"></i> الجمعة: 9:00 - 12:00</p>
+          <p><i class="fas fa-clock"></i> السبت: مغلق</p>
+        </div>
+        <div class="footer-column">
+          <h3>تابعونا</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

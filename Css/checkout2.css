@@ -1,0 +1,195 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Barriecito&family=Crete+Round:ital@0;1&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Pacifico&family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+body {
+    font-family: 'Arial', sans-serif;
+    direction: rtl;
+     background: linear-gradient(to bottom, #800020, #F8F4E3);
+     margin: 0;
+     padding: 10px;
+}
+h2 {
+    text-align: center;
+    color: #800020;
+    margin-bottom: 10px;
+    font-family: 'Amiri';
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding:  5PX 30PX;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.payment-container {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 15px;
+}
+
+.payment-options-column {
+    flex: 1;
+    background: #f8f4e3;
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid #eee;
+}
+.info-column {
+    flex: 2;
+}
+.payment-options-header {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.payment-options-header label {
+    display: flex;
+    align-items: center;
+    padding: 18px;
+    background: #f8f4e3;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px 60PX 15PX 50px;
+    transition: all 0.3s ease;
+}
+
+.payment-options-header label:hover {
+    background: #f8f4e3;
+    border: #D4AF37 2PX solid;
+}
+
+.payment-options-header i {
+    margin-left: 15px;
+    font-size: 28px;
+    color: #D4AF37;
+}
+input{
+    width: 96%;
+    padding: 8px;
+    margin: 4px 0 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+select {
+    width: 100%;
+    padding: 8px;
+    margin: 4px 0 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+input:focus {
+    background-color: white;
+    border-color: #800020;
+}
+
+.card-info {
+    display: none;
+    animation: slideIn 0.4s ease-out;
+}
+
+
+
+button {
+    display: block;
+    margin: 20px auto;
+    background-color: #800020;
+    color: white;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 160px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #b8942c, #8c6e1f);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.total-price {
+    font-weight: bold;
+    color: #800020;
+    background: #f8f4e3;
+    border: 1.5px solid #D4AF37;
+    padding: 5px 10px; 
+    text-align: center;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px; /* Réduction de la taille de la police */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.total-price p {
+    margin: 5px 0; /* Réduction de l’espace vertical entre les éléments */
+    font-size: 13px;
+}
+
+.total-price strong {
+    font-size: 15px;
+}
+
+#orderConfirmation {
+    margin-top: 15px;
+    border-radius: 8px;
+    color: #2c5f2d;
+}
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 768px) {
+    .payment-container {
+        flex-direction: column;
+        gap: 10PX;
+    }
+    
+    .info-column {
+        min-width: auto;
+    }
+    
+    .payment-options-column {
+        width: 90%;
+    }
+}
+.logo {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row-reverse;
+    gap: 2px;
+}
+.logo img {
+    height: 80px; /* Adjust size as needed */
+}
+.logo-h{
+    font-family: 'Great Vibes', serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #D4AF37;
+    text-align: center;
+    margin: 0;
+    padding-top: 20px;
+    position: relative;
+    right: 15PX;
+}

@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Crete+Round:ital@0;1&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Pacifico&family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Barriecito&family=Crete+Round:ital@0;1&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Pacifico&family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom, #800020, #F8F4E3);
+  margin: 50px 0 0 0;
+  padding: 0;
+  font-family: Amiri;
+}
+.logo-container{
+    font-family: 'Great Vibes', serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #D4AF37;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img{
+  padding: 0 0 40PX 0;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+.site-name {
+  font-size: 32px;
+  color: #D4AF37;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.container {
+  background-color: white;
+  padding: 30px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  color: #D4AF37;
+  font-size: 28px;
+}
+
+.subtitle {
+  color: #D4AF37;
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.intro {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.8;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.feature-box {
+  background-color: #E6C7B6;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box h3 {
+  color: #800020;
+}
+
+.feature-box p {
+  color: #333;
+}

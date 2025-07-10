@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Amiri", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #800020;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #efe6c0; 
+}
+
+.container {
+  position: relative;
+  width: 900px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px 0 0 10px; 
+}
+
+.contactInfo {
+  position: absolute;
+  left: -100px ;
+  width:350px ;
+  height: 80%;
+  background: #800020; 
+  z-index: 1;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contactForm {
+  position: relative;
+  padding: 50px;
+  left:100px;
+  width: 60%;
+  z-index: 2;
+}
+.contactInfo h2{
+  font-size: 24px;
+}
+li{
+  list-style: none;
+
+}
+img{
+  width: 45px;
+}
+.info li{
+  position: relative;
+  list-style: none;
+  display: flex;
+  margin:  20PX 0 ;
+  cursor: pointer;
+  align-items: flex-start;
+}
+.sci{
+  position: relative;
+  display: flex;
+}
+ul.sci li{
+  list-style: none;
+  margin-right: 20px;
+}
+.sci img{
+  width: 30px;
+}
+.contactForm h2{
+  color: #800020;
+  font-size: 40px;
+}
+
+.formBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+
+.inputbox {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.inputbox.w50 {
+  width: 48%;
+}
+
+.inputbox.w100 {
+  width: 100%;
+}
+
+.inputbox input,
+.inputbox textarea {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #333;
+  border: none;
+  border-bottom: 2px solid #800020;
+  outline: none;
+  background: transparent;
+  transition: border-color 0.3s ease;
+}
+
+.inputbox input:focus,
+.inputbox textarea:focus {
+  border-bottom-color: #D4AF37;
+}
+
+.inputbox span {
+  position: absolute;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #800020;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.inputbox input:focus ~ span,
+.inputbox input:valid ~ span,
+.inputbox textarea:focus ~ span,
+.inputbox textarea:valid ~ span {
+  transform: translateY(-20px);
+  font-size: 12px;
+  color: #D4AF37;
+}
+
+.inputbox input[type="submit"] {
+  background: #800020;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.inputbox input[type="submit"]:hover {
+  background: #6a001a;
+}
+
+
+@media (max-width: 768px) {
+  
+  .container {
+    width: 100%; 
+    height: auto; 
+    flex-direction: column; 
+    border-radius: 10px; 
+  }
+
+  .contactInfo {
+    position: relative; 
+    left: 0; 
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px 10px 0 0; 
+    padding: 20px; 
+  }
+
+  .contactForm {
+    left: 0;
+    width: 100%; 
+    padding: 20px; 
+    border-radius: 0 0 10px 10px; 
+  }
+
+  .contactForm h2 {
+    font-size: 30px;
+    margin-bottom: 20px; 
+  }
+
+  .inputbox.w50 {
+    width: 100%; 
+  }
+
+  .inputbox input,
+  .inputbox textarea {
+    font-size: 14px; 
+  }
+
+  .inputbox span {
+    font-size: 14px; 
+  }
+
+  .inputbox input[type="submit"] {
+    font-size: 14px; 
+  }
+  .info li {
+    margin: 15px 0; 
+  }
+
+  .sci img {
+    width: 25px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .contactInfo {
+    padding: 15px; 
+  }
+  .contactForm {
+    padding: 15px;
+  }
+
+  .contactForm h2 {
+    font-size: 24px; 
+  }
+  .inputbox input,
+  .inputbox textarea {
+    font-size: 12px; 
+  }
+
+  .inputbox span {
+    font-size: 12px;
+   }
+
+
+  .inputbox input[type="submit"] {
+    font-size: 12px; 
+  }
+
+  .info li {
+    margin: 10px 0; 
+  }
+
+  .sci img {
+    width: 20px; 
+  }
+}

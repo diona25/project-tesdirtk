@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment - Tsdirtk</title>
+    <link rel="stylesheet" href="../Css/checkout2.css" />
+    <script src="../js/checkE.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="../Images/logo1.png" alt="Tsdirtk Logo" class="logo-img" />
+        <h2 class="logo-h">Tsdirtk</h2>
+      </div>
+      <h2>Payment Information</h2>
+      <!-- Place payment options at the top -->
+      <div class="payment-options-header">
+        <label>
+          <input type="radio" name="paymentMethod" value="cash" onclick="togglePaymentFields()" />
+          <i class="fas fa-hand-holding-usd"></i> Cash on Delivery
+        </label>
+        <label>
+          <input type="radio" name="paymentMethod" value="card" onclick="togglePaymentFields()" />
+          <i class="fas fa-credit-card"></i> Credit Card
+        </label>
+      </div>
+
+      <div class="payment-container">
+        <!-- Customer Information -->
+        <div class="customer-info  ">
+          <label><i class="fas fa-user "></i> Full Name:</label>
+          <input type="text" id="customerName" placeholder="Enter your full name" />
+
+          <label><i class="fas fa-map-marker-alt"></i> Full Address:</label>
+          <input type="text" id="customerAddress" placeholder="Enter your address" />
+
+          <label><i class="fas fa-city"></i> City:</label>
+          <select id="wilayaSelect">
+            <option value="">Select your city...</option>
+          </select>
+
+          <label><i class="fas fa-building"></i> Delivery Office:</label>
+          <select id="officeSelect">
+            <option value="">Select a delivery office...</option>
+          </select>
+        </div>
+
+        <!-- Credit Card Information -->
+        <div class="card-info" id="cardDetails">
+          <label><i class="fas fa-user"></i> Cardholder Name:</label>
+          <input type="text" id="cardHolderName" placeholder="Enter name as on card" />
+
+          <label><i class="fas fa-credit-card"></i> Card Number:</label>
+          <input type="text" id="cardNumber" placeholder="#### #### #### ####" maxlength="19" />
+
+          <label><i class="fas fa-calendar"></i> Expiry Date:</label>
+          <input type="month" id="cardExpiry" />
+
+          <label><i class="fas fa-lock"></i> CVV:</label>
+          <input type="text" id="cardCVV" placeholder="3 digits on the back of the card" maxlength="3" />
+        </div>
+      </div>
+
+      <div class="total-price">
+        <p>Product Price: <span id="productPrice">0</span> $</p>
+        <p>Delivery Price: <span id="shippingPrice">0</span> $</p>
+        <p>
+          <strong>Total Price: <span id="totalPrice">0</span></strong>
+        </p>
+      </div>
+
+      <button id="confirmPayment" onclick="confirmOrder()">Confirm Payment</button>
+
+      <div id="orderConfirmation"></div>
+    </div>
+   
+  </body>
+</html>

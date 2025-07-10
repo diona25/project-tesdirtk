@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Crete+Round:ital@0;1&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Pacifico&family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #800020, #F8F4E3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: #F8F4E3;
+  padding: 20px;
+  border-radius: 60px 60px 20px 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 550px;
+  border: 2px solid #D4AF37;
+}
+
+img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #800020;
+}
+
+.input-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #D4AF37;
+  border-radius: 6px;
+  box-sizing: border-box;
+  text-align: right;
+
+}
+
+button {
+  background: #800020;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 50%;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #800020;
+}
+
+.link {
+  display: block;
+  margin-top: 10px;
+  color: #800020cf;
+  text-decoration: none;
+}
+h1{
+  font-family: 'Great Vibes', serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #D4AF37;
+    margin: 0;
+}
+.input-group :hover{
+  border: #D4AF37 2PX solid;
+}

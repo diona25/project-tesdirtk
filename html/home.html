@@ -1,0 +1,259 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tesdirtek</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+  <link rel="stylesheet" href="../Css/bootstrap.min.css">
+  <link rel="stylesheet" href="../Css/home.css">
+  <script defer src="../js/cart.js"></script>
+</head>
+<body>
+  <section>
+  <nav class="navbar navbar-expand-md sticky-top bg-light shadow-sm ">
+    <div class="container-fluid ">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown d-none d-md-inline-block"id="cart-icon">
+          <a class="nav-link " href="#" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
+              <path d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+            </svg>
+          </a>
+        </li>
+        <li class="nav-item dropdown d-none d-md-inline-block">
+          <a class="nav-link " href="login.html" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+            </svg>
+          </a>
+        </li>
+        </ul>
+      <!-- Logo -->
+       
+      <a class="navbar-brand d-flex align-items-center " href="home.html">
+        <img src="../images/logo.png" alt="logo" width="40px" height="50px">
+        <h1 class="logo ms-2">tesdirtek</h1>
+      </a>
+      
+      <!-- Icons and Toggle Button -->
+      <div class="d-flex align-items-center">
+        
+      <div class="nav-icons  ">
+        <a href="#" class="me-1 text-white d-inline-block d-md-none" id="cart-mobile">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
+            <path d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+          </svg>
+        </a>
+        <a href="login.html" class="me-1 text-dark d-inline-block d-md-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+          </svg>
+        </a>
+
+      </div>
+      <button class="navbar-toggler" type="button w-25 h-25" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      </div>
+       
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse  " id="navbarNav">
+        <ul class="navbar-nav  ">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown">اللغة</a>
+            <ul class="dropdown-menu ">
+              <li><a class="dropdown-item " href="#">عربية</a></li>
+              <!-- <li><a class="dropdown-item" href="#">انجليزية</a></li> -->
+              <li><a class="dropdown-item" href="homeE.html" onclick="switchToEnglish()">انجليزية</a></li>
+
+            </ul>
+          </li>
+         
+          <li class="nav-item "><a class="nav-link" href="about.html">من نحن؟</a></li>
+          <li class="nav-item "><a class="nav-link" href="home.html">الرئيسية</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container py-5 text-center text-md-start">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center ">
+        <h2 class="text-light">!مرحبًا بكِ في تصديرتك</h2>
+        <p class="text-light">حيث يلتقي التراث بالأناقة ليمنحكِ إطلالة ساحرة في يومك المميز. اكتشفي تشكيلتنا الفريدة من ملابس العروس المصممة لتجعلكِ تتألقين بجمال لا يُنسى</p>
+        <a href="Product.html"><button class="button justify-content-center" style="color: #F8F4E3;">اكتشفي تشكيلتنا</button></a>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center ">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade first " data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../images/carousel1.jpg" class="d-block  rounded" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+              <img src="../images/carousel2.jpg" class="d-block rounded" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+              <img src="../images/carousel3.jpg" class="d-block  rounded" alt="Slide 3">
+            </div>
+            <div class="carousel-item">
+              <img src="../images/carousel4.jpg" class="d-block  rounded" alt="Slide 4">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="marquee-wrapper">
+  <marquee >
+    <ul class="d-flex flex-direction-row">
+      <li>  مرحبا بك في متجرنا • </li>
+      <li>  قماش ذو جودة عالية • </li>
+      <li>    توصيل 58 ولاية  •</li>
+      <li>  تصاميم تجمع بين التقليدي و العصري • </li>
+      <li>  مرحبا بك في متجرنا • </li>
+      <li>  قماش ذو جودة عالية • </li>
+      <li>    توصيل 58 ولاية  •</li>
+      <li>  تصاميم تجمع بين التقليدي و العصري • </li>
+    </ul>
+  </marquee>
+</div>
+
+  <div class=" container text-center   ">
+  <h1 class=" text-center mt-5 p-2 " style="color: #F8F4E3;">...عن قريب</h1>
+  <h3 style="color: #F8F4E3;">ترقبوا قريبا...تصاميم فريدة من وحي التراث القبائلي الاصيل</h3>
+  <div class="card-group">
+    <div class="card">
+        <img src="../images/kabilie3.jpg">
+        <div class="layer"></div>
+        <div class="info">
+            <h1 class="text-center" style="color: #F8F4E3;">قريبا</h1>
+        </div>
+    </div>
+
+    <div class="card">
+      <img src="../images/kabilie1.jpg">
+      <div class="layer"></div>
+      <div class="info">
+          <h1 class="text-center" style="color: #F8F4E3;">قريبا</h1>
+      </div>
+  </div>
+
+    <div class="card">
+        <img src="../images/kabilie2.jpg">
+        <div class="layer"></div>
+        <div class="info">
+         
+            <h1 class="text-center"style="color:#F8F4E3;">قريبا</h1>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<div class="cart-overlay"></div>
+<div class="cart-sidebar">
+  <div class="cart-header">
+      <h3>سلة التسوق</h3>
+      <button class="close-cart">&times;</button>
+  </div>
+  <div class="cart-body">
+      <div class="cart-items-container"></div>
+     
+  </div>
+  <div class="cart-total">
+    الإجمالي: $<span id="total-price">0.00</span>
+</div>
+  <a href="CHECK.html" class="btn btn-success w-100 py-2 checkout-btn">
+    <li class="fas fa-shopping-cart me-2"></li> إتمام الشراء
+</a>
+</div>
+
+  </section>
+  <footer class="footer">
+    <!-- القسم العلوي -->
+    <div class="footer-top">
+        <h2>تواصلوا معنا ...</h2>
+        <div class="contact-button">
+            <a href="contact E.html"><i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <!-- القسم السفلي -->
+    <div class="footer-bottom">
+        
+        <div class="footer-column">
+            <h3>بيانات التواصل</h3>
+            <p><i class="fas fa-envelope"></i> info@tsdirtk.com</p>
+            <p><i class="fas fa-phone"></i> +213 123 456 789</p>
+            <p><i class="fas fa-map-marker-alt"></i> قسنطينة,الجزائر</p>
+        </div>
+
+        
+        <div class="footer-column">
+            <h3>طرق الدفع</h3>
+            <div class="payment-icons">
+                <i class="fas fa-credit-card"></i> البطاقة الذهبية
+                <br>
+                <i class="fas fa-hand-holding-usd"></i> الدفع عند الاستلام
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3>مواقيت العمل</h3>
+            <p><i class="fas fa-clock"></i> الأحد - الخميس: 9:00 - 18:00</p>
+            <p><i class="fas fa-clock"></i> الجمعة: 9:00 - 12:00</p>
+            <p><i class="fas fa-clock"></i> السبت: مغلق</p>
+        </div>
+        <div class="footer-column">
+          <h3>تابعونا</h3>
+          <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+      </div>
+
+    </div>
+</footer>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  
+
+
+<script>
+  function switchToEnglish() {
+    // Redirect to home page (index.html)
+    window.location.href = "homeE.html"; 
+  }
+</script>
+  <!-- Cart Structure -->
+<div class="cart-overlay"></div>
+<div class="cart-sidebar">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="close-cart">&times;</button>
+  </div>
+  <div class="cart-body">
+    <div class="cart-items-container"></div>
+  </div>
+  <div class="cart-total">Total $<span id="total-price">0.00</span></div>
+  <a href="checkE.html" class="btn btn-success w-100 py-2 checkout-btn">
+    <i class="fas fa-shopping-cart me-2"></i> Checkout
+  </a>
+</div>
+</body>
+</html>

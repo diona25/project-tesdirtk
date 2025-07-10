@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدفع - Tsdirtk</title>
+    <link rel="stylesheet" href="../Css/checkout2.css" />
+    <script src="../js/check.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="../Images/logo1.png" alt="شعار Tsdirtk" class="logo-img" />
+        <h2 class="logo-h">Tsdirtk</h2>
+      </div>
+      <h2>معلومات الدفع</h2>
+      <!-- وضع خيارات الدفع في الأعلى -->
+      <div class="payment-options-header">
+        <label>
+          <input type="radio" name="paymentMethod" value="cash" onclick="togglePaymentFields()" />
+          <i class="fas fa-hand-holding-usd"></i> الدفع عند الاستلام
+        </label>
+        <label>
+          <input type="radio" name="paymentMethod" value="card" onclick="togglePaymentFields()" />
+          <i class="fas fa-credit-card"></i> البطاقة الذهبية
+        </label>
+      </div>
+
+      <div class="payment-container">
+        <!-- معلومات الزبون -->
+        <div class="customer-info">
+          <label><i class="fas fa-user"></i> الاسم الكامل:</label>
+          <input type="text" id="customerName" placeholder="أدخل اسمك بالكامل" />
+
+          <label><i class="fas fa-map-marker-alt"></i> العنوان الكامل:</label>
+          <input type="text" id="customerAddress" placeholder="أدخل عنوانك" />
+
+          <label><i class="fas fa-city"></i> الولاية:</label>
+          <select id="wilayaSelect">
+            <option value="">اختر ولايتك...</option>
+          </select>
+
+          <label><i class="fas fa-building"></i> مكتب التوصيل:</label>
+          <select id="officeSelect">
+            <option value="">اختر مكتب التوصيل...</option>
+          </select>
+        </div>
+
+        <!-- معلومات البطاقة -->
+        <div class="card-info" id="cardDetails">
+          <label><i class="fas fa-user"></i> اسم حامل البطاقة:</label>
+          <input type="text" id="cardHolderName" placeholder="أدخل الاسم كما هو في البطاقة" />
+
+          <label><i class="fas fa-credit-card"></i> رقم البطاقة:</label>
+          <input type="text" id="cardNumber" placeholder="#### #### #### ####" maxlength="19" />
+
+          <label><i class="fas fa-calendar"></i> تاريخ انتهاء الصلاحية:</label>
+          <input type="month" id="cardExpiry" />
+
+          <label><i class="fas fa-lock"></i> رمز CVV:</label>
+          <input type="text" id="cardCVV" placeholder="3 أرقام خلف البطاقة" maxlength="3" />
+        </div>
+      </div>
+
+      <div class="total-price">
+        <p>سعر المنتج: <span id="productPrice">0</span> $</p>
+        <p>سعر التوصيل: <span id="shippingPrice">0</span> $</p>
+        <p>
+          <strong>السعر الإجمالي: <span id="totalPrice">0</span></strong>
+        </p>
+      </div>
+
+      <button id="confirmPayment" onclick="confirmOrder()">تأكيد الدفع</button>
+
+      <div id="orderConfirmation"></div>
+    </div>
+  </body>
+</html>
